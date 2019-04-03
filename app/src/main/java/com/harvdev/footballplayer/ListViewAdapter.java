@@ -50,7 +50,7 @@ public class ListViewAdapter extends ArrayAdapter<PlayerItem> {
         textViewName.setText(playerItem.getName());
         textViewBirth_date.setText(playerItem.getBirth_date());
         textViewPosition.setText(playerItem.getPosition());
-        
+
 
         Picasso.get().load(playerItem.getPoster()).placeholder(R.drawable.ic_person_outline_black_24dp).into(imgVIew);
 
