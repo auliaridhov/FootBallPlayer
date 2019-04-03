@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -52,16 +53,16 @@ public class ListViewAdapter extends ArrayAdapter<PlayerItem> {
         textViewPosition.setText(playerItem.getPosition());
 
 
-        Picasso.get().load(playerItem.getPoster()).placeholder(R.drawable.ic_person_outline_black_24dp).into(imgVIew);
+        Picasso.get().load(playerItem.getPoster()).placeholder(R.drawable.ic_person_outline_black_24dp).fit().into(imgVIew);
 
-        listViewItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), DetailActivity.class);
-                intent.putExtra("gambar", playerItem.getPoster());
-                getContext().startActivity(intent);
-            }
-        });
+//        listViewItem.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getContext(), DetailActivity.class);
+//                intent.putExtra("gambar", playerItem.getPoster());
+//                getContext().startActivity(intent);
+//            }
+//        });
 
         return listViewItem;
     }

@@ -17,7 +17,8 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         ImageView poster = findViewById(R.id.gambar);
         String pstr = getIntent().getExtras().get("gambar").toString();
+        String url = "http://images.pitchero.com/ui/2472624/image_59b1520b0f919.jpg";
         Toast.makeText(this, pstr, Toast.LENGTH_SHORT).show();
-        Picasso.get().load(pstr).into(poster);
+        Picasso.get().load(url).into(poster);
     }
 }
